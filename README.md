@@ -7,6 +7,7 @@
 - [O que é TypeScript?](#o-que-é-typescript)
 - [Porque usar TypeScript?](#porque-usar-typescript)
 - [Desvantanges do TypeScript](#desvantanges-do-typescript)
+- [Mitos](#mitos)
 - [Referências](#referências)
 
 ## O que é TypeScript?
@@ -69,6 +70,32 @@ Através do _IntelliSense_, a IDE é capaz de identificar quais métodos são at
 - Necessita ser compilado antes de ser usado em produção;
 - Curva de aprendizado inicial (dos tipos e boas práticas);
 - Erros nem sempre são muito claros ou então são muito grandes (difícil ter um _tracking_ mais assertivo do erro).
+
+## Mitos
+
+- "Vou ter que aprender tudo de novo".
+
+  ❌ **MITO**: O **TypeScript** adiciona novos recursos ao **JavaScript**, então, se você já sabe JavaScript, basta aprender apenas a utilizar os recursos do TypeScript. <br/>
+
+- "Vou precisar reescrever tudo para TypeScript".
+
+  ❌ **MITO**: Você pode fazer uma adoção gradual para TypeScript nos seus projetos, trabalhando tanto com JavaScript quanto com TypeScript, no mesmo projeto.
+
+- "Já escrevo testes, não preciso disso.".
+
+  ❌ **MITO**: Você pode ter AINDA MAIS segurança ao escrever seus testes com TypeScript.
+
+- "Só funciona com Programação Orientada à Objetos".
+
+  ❌ **MITO**: O **TypeScript** funciona com qualquer paradigma.
+
+- "É verboso demais, preciso tipar TUDO!".
+
+  ❌ **MITO**: De fato, você escreve um pouco mais por conta da definição de tipos, mas não necessariamente, você precisar sair tipando tudo no projeto. Uma vez que temos a [inferência de tipos](https://www.typescriptlang.org/docs/handbook/type-inference.html), o TypeScript já identifica qual é o tipo de variáveis, dada as suas atribuições de valores.
+
+- "Só serve para projetos grandes".
+
+  ❌ **MITO**: Você pode utilizar em qualquer tipo de projeto. É claro, te dará muito mais escalabilidade no futuro, a medida em que seu projeto começa a tomar proporções maiores.
 
 ## Referências
 
