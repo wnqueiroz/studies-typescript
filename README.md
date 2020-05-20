@@ -99,4 +99,4 @@ Através do _IntelliSense_, a IDE é capaz de identificar quais métodos são at
 
 ## Referências
 
-- JUSTEN, Willian. **Mini-curso de TypeScript**. [S. l.], 2020. Disponível em: https://www.youtube.com/playlist?list=PLlAbYrWSYTiPanrzauGa7vMuve7_vnXG_. Acesso em: 18 maio 2020.
+- JUSTEN, Willian. **Mini-curso de TypeScript**. [S. l.], 2020. Disponível em: [https://www.youtube.com/playlist?list=PLlAbYrWSYTiPanrzauGa7vMuve7_vnXG_](https://www.youtube.com/playlist?list=PLlAbYrWSYTiPanrzauGa7vMuve7_vnXG_). Acesso em: 18 maio 2020.
