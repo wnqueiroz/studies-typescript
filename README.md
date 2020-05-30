@@ -8,6 +8,9 @@
 - [Porque usar TypeScript?](#porque-usar-typescript)
 - [Desvantanges do TypeScript](#desvantanges-do-typescript)
 - [Mitos](#mitos)
+- [Configurando o TypeScript](#configurando-o-typescript)
+  - [Instalação](#instalação)
+  - [TSConfig](#tsconfig)
 - [Referências](#referências)
 
 ## O que é TypeScript?
@@ -97,6 +100,86 @@ Através do _IntelliSense_, a IDE é capaz de identificar quais métodos são at
 
   ❌ **MITO**: Você pode utilizar em qualquer tipo de projeto. É claro, te dará muito mais escalabilidade no futuro, a medida em que seu projeto começa a tomar proporções maiores.
 
+## Configurando o TypeScript
+
+### Instalação
+
+O TypeScript pode ser configurado no seu projeto com o comando:
+
+#### npm:
+
+```bash
+$ npm i typescript --save-dev
+```
+
+#### yarn
+
+```bash
+$ yarn add -D typescript
+```
+
+> NOTA: ambos os comandos instalarão o TypeScript como uma dependência de desenvolvimento. Visto que utilizamos o seu compilador para "transpilar" o código `.ts` para `.js`.
+
+Ou globalmente, utilizando:
+
+#### npm:
+
+```bash
+$ npm i typescript -g
+```
+
+#### yarn
+
+```bash
+$ yarn global add typescript
+```
+
+> NOTA: Ao instalar, será disponibilizado o compilador do TypeScript através do comando `tsc` para o projeto.
+
+### TSConfig
+
+Um arquivo TSConfig na raiz de um diretório, indica que é um projeto TypeScript ou JavaScript. O arquivo **TSConfig** pode ser um `tsconfig.json` ou `jsconfig.json`, ambos têm o mesmo comportamento e o mesmo conjunto de variáveis ​​de configuração.
+
+Para inicializar as configurações do arquivo `tsconfig.json` utilize o comando:
+
+```bash
+$ tsc --init
+```
+
+Exemplo de um arquivo `tsconfig.json`:
+
+```js
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
+```
+
+Uma dica muito importante é já definir onde o compilador irá armazenar o código "transpilado" e informar quais arquivos serão incluídos na conversão. Você pode fazer isso através das propriedade `compilerOptions.outDir` e `include`:
+
+```js
+{
+  // ...
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    // ...
+    "outDir": "dist"
+  }
+}
+```
+
+Com isso, ao executar o comando `tsc` na raiz do projeto, o compilador irá "transpilar" os nossos arquivos `.ts` (utilizando as especificações do arquivo `tsconfig.json`) para `.js` na pasta `dist` (gerada automaticamente).
+
+Caso queira se aprofundar em outras configurações, todas as possíveis propriedades desse arquivo podem ser encontradas em: https://www.typescriptlang.org/tsconfig.
+
 ## Referências
 
-- JUSTEN, Willian. **Mini-curso de TypeScript**. [S. l.], 2020. Disponível em: [https://www.youtube.com/playlist?list=PLlAbYrWSYTiPanrzauGa7vMuve7_vnXG_](https://www.youtube.com/playlist?list=PLlAbYrWSYTiPanrzauGa7vMuve7_vnXG_). Acesso em: 18 maio 2020.
+- JUSTEN, Willian. **Mini-curso de TypeScript**. [S. l.], 2020. Disponível em: [https://www.youtube.com/playlist?list=PLlAbYrWSYTiPanrzauGa7vMuve7*vnXG*](https://www.youtube.com/playlist?list=PLlAbYrWSYTiPanrzauGa7vMuve7_vnXG_). Acesso em: 18 maio 2020.
+
+- TYPESCRIPT: Typed JavaScript at Any Scale. [S. l.], 2020. Disponível em: https://www.typescriptlang.org/. Acesso em: 30 maio 2020.

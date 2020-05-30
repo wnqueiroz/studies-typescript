@@ -1,0 +1,10 @@
+{
+  "name": "studies-typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/wnqueiroz/studies-typescript.git",
+  "author": "William Queiroz <wnqueiroz@outlook.com>",
+  "devDependencies": {
+    "typescript": "^3.9.3"
+  }
+}
